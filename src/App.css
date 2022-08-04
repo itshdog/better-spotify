@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+html, body {
+    background-color: var(--bg-color)!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#login-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--spotify-green);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.PlayerRSWP {
+    background-color: var(--bg-color)!important;
+}
+
+.btn:hover {
+    background-color: var(--spotify-green);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0 #138b49;
+    transition: 0.25s;
+    text-decoration: none;
+    border: none;
+}
+
+.btn {
+    background-color: var(--spotify-green);
+    transition: 0.25s;
+    text-decoration: none;
+    border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 999em;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 999em;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(184, 184, 184);
+    border-radius: 999em;
   }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(150, 150, 150);
+    border-radius: 999em;
+  }
+
+:root {
+    --spotify-green: #1db964;
+    --spotify-black: #191414;
+    --bg-color: #ffffff;
 }
