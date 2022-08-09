@@ -6,16 +6,16 @@ export default function TrackSearchResult({track, chooseTrack}) {
     }
 
     return (
-    <div 
-        className="d-flex m-2 align-items-center" 
-        style={{cursor: 'pointer'}}
-        onClick={handlePlay}
-    >
-        <img src={track.albumUrl} style={{height: "80px", weight: "80px"}}/>
-        <div style={{margin: "0 10px"}}>
-            <div>{track.title}</div>
-            <div className="text-muted">{track.artist}</div>
+        <div 
+            className="d-flex m-2 align-items-center" 
+            style={{cursor: 'pointer'}}
+            onClick={handlePlay}
+        >
+            <img src={track.albumUrl} style={{height: "80px", weight: "80px"}}/>
+            <div style={{margin: "0 10px"}}>
+                <div>{track.title}</div>
+                <div className="text-muted">{track.artist}</div>
+            </div>
         </div>
-    </div>
     )
 }

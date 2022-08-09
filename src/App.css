@@ -12,6 +12,18 @@ html, body {
     background-color: var(--bg-color)!important;
 }
 
+input .form-control {
+  border: none;
+  text-decoration: none;
+  color: white;
+}
+
+input[type="search"]:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
 .btn:hover {
     background-color: var(--spotify-green);
     transform: translateY(-5px);
