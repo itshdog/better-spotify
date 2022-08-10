@@ -4,7 +4,6 @@ import TrackSearchResult from './TrackSearchResult'
 import Player from './Player'
 import { Container, Form } from 'react-bootstrap'
 import SpotifyWebApi from 'spotify-web-api-node'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios'
 
 const spotifyApi = new SpotifyWebApi({
@@ -27,6 +26,7 @@ export default function Dashboard({code}) {
     useEffect(() => {
         if (!playingTrack) return
 
+        // axios.get('http://localhost:3001/lyrics', {
         axios.get('https://itshdog-spotify.herokuapp.com/lyrics', {
             params: {
                 track: playingTrack.title,
@@ -69,16 +69,17 @@ export default function Dashboard({code}) {
 
     return (
         <Container className="d-flex flex-column py-2" style={{height: "100vh"}}>
-            <div id="searchbar" style={{borderRadius: "999em", backgroundColor: "rgba(255,255,255,0.10)"}}>
-                <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+            <div id="my-searchbar">
+                <i class="fa-solid fa-magnifying-glass"></i>
                 <Form.Control 
-                type="search" 
-                placeholder="Type to search" 
-                value={search} 
-                onChange={e => setSearch(e.target.value)} 
+                    type="search" 
+                    placeholder="Type to search" 
+                    value={search} 
+                    onChange={e => setSearch(e.target.value)}
+                    style={{width: "calc(100% - 1.75rem)", float: "right"}}
                 />
             </div>
-            <div className="flex-grow-1 my-2" style={{overflowY: "auto"}}>
+            <div className="flex-grow-1 my-2" style={{overflowY: "auto", overflowX: "hidden"}}>
                 {searchResults.map(track => (
                     <TrackSearchResult 
                         track={track} 
