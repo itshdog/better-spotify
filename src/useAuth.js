@@ -8,6 +8,7 @@ export default function useAuth(code) {
 
     useEffect(() => {
         axios
+            // .post("http://localhost:3001/login", {
             .post("https://itshdog-spotify.herokuapp.com/login", {
                 code,
             })
@@ -17,8 +18,9 @@ export default function useAuth(code) {
                 setExpiresIn(res.data.expiresIn)
                 window.history.pushState({}, null, "/")
             })
-            .catch(() => {
-                window.location = "/"
+            .catch(err => {
+                console.log(err);
+                // window.location = "/"
             })
     }, [code])
 
@@ -26,6 +28,7 @@ export default function useAuth(code) {
         if (!refreshToken || !expiresIn) return
         const interval = setInterval(() => {
             axios
+                // .post("http://localhost:3001/refresh", {
                 .post("https://itshdog-spotify.herokuapp.com/refresh", {
                     refreshToken,
                 })

@@ -1,33 +1,103 @@
 html, body {
     background-color: var(--bg-color)!important;
+    color: white!important;
 }
 
 #login-title {
     font-size: 3em;
     font-weight: bold;
-    color: var(--spotify-green);
+    color: var(--spotify-green);    
 }
 
 .PlayerRSWP {
     background-color: var(--bg-color)!important;
+    color: white!important;
 }
 
-input .form-control {
-  border: none;
-  text-decoration: none;
+.PlayerRSWP ._SliderRSWP {
+  margin-bottom: 10px;
+}
+
+.PlayerRSWP ._SliderRSWP div div {
+  background-color: rgba(0, 0, 0, 0.05)!important;
+  padding-bottom: 5px;
+}
+
+.__77inad p:last-child a {
+  color: rgba(255,255,255, 0.5)!important;
+}
+
+.PlayerRSWP ._ContentRSWP .rswp__active div p span a {
   color: white;
 }
 
-input[type="search"]:focus {
-  border-color: none;
+._ControlsRSWP div button svg, ._ActionsRSWP div button svg {
+  filter: brightness(0) invert(1);
+}
+
+.PlayerRSWP ._ContentRSWP .rswp__active {
+  padding-bottom: 10px;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+._SliderRSWP div div div span {
+  background-color: white!important;
+}
+
+._VolumeRSWP div {
+  box-shadow: none!important;
+  border-radius: 999em;
+  border: 2px solid rgba(255,255,255,0.15);
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+._VolumeRSWP div div {
+  border: none;
+}
+
+.rrs .rrs__track div {
+  background-color: transparent!important;
+}
+
+.rrs .rrs__track {
+  background-color:rgba(0, 0, 0, 0.2)!important;
+}
+
+.rrs .rrs__track .rrs__range {
+  background-color:rgba(255,255,255, 0.4)!important;
+}
+
+#my-searchbar {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 999em;
+  border: 2px solid rgba(255,255,255,0.05)
+}
+
+#my-searchbar input:focus {
+  color: white;
+}
+
+#my-searchbar i {
+  padding: 0.75rem 0.375rem;
+}
+
+.form-control {
+  padding: 0.375rem 0!important;
+  border: none;
+}
+
+.form-control:focus {
   box-shadow: none;
-  outline: 0 none;
+}
+
+input {
+  background-color: transparent!important;
 }
 
 .btn:hover {
     background-color: var(--spotify-green);
     transform: translateY(-5px);
-    box-shadow: 0 5px 0 #138b49;
+    box-shadow: 0 7px 0 #138b49;
     transition: 0.25s;
     text-decoration: none;
     border: none;
@@ -36,6 +106,7 @@ input[type="search"]:focus {
 .btn {
     background-color: var(--spotify-green);
     transition: 0.25s;
+    box-shadow: 0 2px 0 #138b49;
     text-decoration: none;
     border: none;
 }
@@ -48,24 +119,25 @@ input[type="search"]:focus {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(0,0,0,0.05);
     border-radius: 999em;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(184, 184, 184);
+    background: rgba(255,255,255,0.15);
+    opacity: 0.15;
     border-radius: 999em;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(150, 150, 150);
+    background: rgba(255,255,255,0.05);
     border-radius: 999em;
   }
 
 :root {
     --spotify-green: #1db964;
     --spotify-black: #191414;
-    --bg-color: #ffffff;
+    --bg-color: #3d3d3d;
 }

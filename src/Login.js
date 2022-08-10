@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 
 const authEndpoint = "https://accounts.spotify.com/authorize"
 const clientId = "25f06efb0ad24c40bd02a2292c55d1c5"
+// const redirectUri = "http://localhost:3000"
 const redirectUri = "https://itshdog-spotify.herokuapp.com/"
 const scopes = [
     "streaming",
