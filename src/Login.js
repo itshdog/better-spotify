@@ -21,9 +21,12 @@ export default function Login() {
         className="d-flex justify-content-center align-items-center"
         style={{minHeight: "100vh"}}
     >
-        <div className="position-absolute" style={{top: '42%'}} id="login-title">Better Spotify</div>
+        <div className="position-absolute" style={{top: '42%'}} id="login-title">
+            <i className="fa-brands fa-spotify"></i>
+            Better Spotify
+        </div>
         <a className="btn btn-success btn-lg position-absolute" style={{top: '53%'}} href={
-            `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=code&show_dialog=true`
+            `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=code`
         }>
             Login With Spotify
         </a>

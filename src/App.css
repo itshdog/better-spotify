@@ -6,7 +6,41 @@ html, body {
 #login-title {
     font-size: 3em;
     font-weight: bold;
-    color: var(--spotify-green);    
+    color: white;
+    transition: 0.5s;
+}
+
+#login-title i {
+  padding-right: 10px;
+  text-shadow: none;
+  color: var(--spotify-green);   
+}
+
+#my-top-panel {
+  font-size: 1.35rem;
+  padding: 5px;
+}
+
+#my-top-panel i {
+  padding: 0 5px;
+  color: var(--spotify-green)
+}
+
+#my-top-panel #top-panel-left {
+  font-weight: 500;
+}
+
+#my-top-panel #top-panel-right {
+  font-size: 1rem;
+}
+
+#my-top-panel #user-info {
+  background-color:rgba(0, 0, 0, 0.1);
+  border-radius: 999em;
+  padding: 5px;
+  margin: 0 3px;
+  top: 50%;
+  left: 50%;
 }
 
 .PlayerRSWP {

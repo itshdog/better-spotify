@@ -67,10 +67,22 @@ export default function Dashboard({code}) {
         return () => (cancel = true)
     }, [search, accessToken])
 
+
     return (
         <Container className="d-flex flex-column py-2" style={{height: "100vh"}}>
+            <div id="my-top-panel">
+                <div id="top-panel-left" style={{float: "left"}}>
+                    <i className="fa-brands fa-spotify"></i>
+                    Better Spotify
+                </div>
+                <div id="top-panel-right" style={{float: "right"}}>
+                    <div id="user-info">
+                        Hayden Westphal
+                    </div>
+                </div>
+            </div>
             <div id="my-searchbar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
                 <Form.Control 
                     type="search" 
                     placeholder="Type to search" 
